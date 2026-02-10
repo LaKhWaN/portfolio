@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ReactLenis } from "lenis/react";
+import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import { Home } from "./pages/Home";
@@ -10,6 +10,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <Analytics />
       <ReactLenis root>
         <div className="relative min-h-screen w-full overflow-hidden bg-background">
           <Navbar />
