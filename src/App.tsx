@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ReactLenis } from "lenis/react";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "./components/Navbar";

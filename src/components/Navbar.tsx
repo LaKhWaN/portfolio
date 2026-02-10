@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "../lib/utils";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
