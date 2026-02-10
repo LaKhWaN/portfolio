@@ -1,25 +1,28 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ReactLenis } from "lenis/react";
 import { Navbar } from "./components/Navbar";
-import { Hero } from "./components/Hero";
-import { Experience } from "./components/Experience";
-import { Services } from "./components/Services";
-import { Testimonials } from "./components/Testimonials";
-import { Contact } from "./components/Contact";
+import ScrollToTop from "./components/ScrollToTop";
+import { Home } from "./pages/Home";
+import { BlogIndex } from "./pages/BlogIndex";
+import { BlogPost } from "./pages/BlogPost";
 
 function App() {
   return (
-    <ReactLenis root>
-      <div className="relative min-h-screen w-full overflow-hidden bg-background">
-        <Navbar />
-        <main>
-          <Hero />
-          <Experience />
-          <Services />
-          <Testimonials />
-          <Contact />
-        </main>
-      </div>
-    </ReactLenis>
+    <Router>
+      <ScrollToTop />
+      <ReactLenis root>
+        <div className="relative min-h-screen w-full overflow-hidden bg-background">
+          <Navbar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/blog" element={<BlogIndex />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+            </Routes>
+          </main>
+        </div>
+      </ReactLenis>
+    </Router>
   );
 }
 
