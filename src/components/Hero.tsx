@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Bot, Globe } from "lucide-react";
+import profileImg from "../assets/profile.png";
 
 export const Hero = () => {
   const [text, setText] = useState("");
@@ -103,7 +104,7 @@ export const Hero = () => {
 
             {/* Profile Image */}
             <img
-              src="/src/assets/profile.png"
+              src={profileImg}
               alt="Upender Singh Lakhwan"
               className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] grayscale hover:grayscale-0 transition-all duration-700"
             />
