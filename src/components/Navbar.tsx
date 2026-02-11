@@ -37,7 +37,7 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold tracking-tighter">
-          DEV<span className="text-primary">.Portfolio</span>
+          Lakhwan<span className="text-primary">.folio</span>
         </Link>
 
         {/* Desktop Nav */}
