@@ -49,9 +49,9 @@ export const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="glass p-8 rounded-2xl relative"
+              className="glass p-8 rounded-3xl relative bg-secondary/30"
             >
-              <Quote className="absolute top-6 right-6 w-8 h-8 text-white/10" />
+              <Quote className="absolute top-6 right-6 w-8 h-8 text-foreground/5" />
               <div className="flex gap-1 mb-4">
                 {[...Array(t.rating)].map((_, i) => (
                   <Star
@@ -60,10 +60,10 @@ export const Testimonials = () => {
                   />
                 ))}
               </div>
-              <p className="text-gray-300 mb-6 italic">"{t.text}"</p>
+              <p className="text-foreground/70 mb-6 italic font-sans">"{t.text}"</p>
               <div>
-                <h4 className="font-bold text-white">{t.name}</h4>
-                <p className="text-sm text-primary">{t.role}</p>
+                <h4 className="font-bold text-foreground">{t.name}</h4>
+                <p className="text-sm text-primary font-medium">{t.role}</p>
               </div>
             </motion.div>
           ))}

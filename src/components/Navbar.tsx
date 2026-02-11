@@ -3,6 +3,7 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,6 +70,7 @@ export const Navbar = () => {
               </a>
             )
           ))}
+          <ThemeToggle />
           <a
             href={isHome ? "#contact" : "/#contact"}
             className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105"

@@ -76,15 +76,15 @@ export const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass p-8 rounded-3xl border border-white/10"
+            className="glass p-8 rounded-[2.5rem] bg-secondary/30"
           >
             {status === "success" ? (
               <div className="text-center py-12 space-y-4">
                 <div className="flex justify-center">
                   <CheckCircle2 className="w-16 h-16 text-green-500 animate-bounce" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">Transmission Received!</h3>
-                <p className="text-gray-400">I'll get back to you faster than a reasoning model. 🚀</p>
+                <h3 className="text-2xl font-bold text-foreground">Transmission Received!</h3>
+                <p className="text-foreground/60">I'll get back to you faster than a reasoning model. 🚀</p>
                 <button 
                   onClick={() => setStatus("idle")}
                   className="text-primary hover:underline text-sm font-medium pt-4"
@@ -95,38 +95,38 @@ export const Contact = () => {
             ) : (
               <form onSubmit={onSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-2">
+                  <label className="block text-sm font-bold text-foreground/70 mb-2 uppercase tracking-widest">
                     Name
                   </label>
                   <input
                     type="text"
                     name="name"
                     required
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-primary transition-all shadow-inner"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-2">
+                  <label className="block text-sm font-bold text-foreground/70 mb-2 uppercase tracking-widest">
                     Email
                   </label>
                   <input
                     type="email"
                     name="email"
                     required
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-primary transition-all shadow-inner"
                     placeholder="john@example.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-2">
+                  <label className="block text-sm font-bold text-foreground/70 mb-2 uppercase tracking-widest">
                     Message
                   </label>
                   <textarea
                     name="message"
                     required
                     rows={4}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-primary transition-all shadow-inner"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -134,10 +134,10 @@ export const Contact = () => {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full bg-gradient-to-r from-primary to-accent text-white font-bold py-4 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full bg-gradient-to-r from-primary to-accent text-white font-bold py-5 rounded-2xl hover:opacity-90 transition-opacity flex items-center justify-center gap-3 disabled:opacity-50 shadow-lg shadow-primary/20"
                 >
                   {status === "loading" ? "Initializing..." : "Send Message"}
-                  {status !== "loading" && <Send className="w-4 h-4" />}
+                  {status !== "loading" && <Send className="w-5 h-5" />}
                 </button>
                 
                 {status === "error" && (

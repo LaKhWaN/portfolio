@@ -56,21 +56,21 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
           className="lg:col-span-7"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-6">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-foreground/60 font-medium">
               Available for Freelance
             </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 min-h-[160px] md:min-h-[220px]">
             Creating <span className="text-gradient">{text}</span>
-            <span className="animate-pulse text-white">|</span>
+            <span className="animate-pulse text-foreground">|</span>
             <br />
             That Matter
           </h1>
 
-          <p className="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
+          <p className="text-lg text-foreground/60 mb-8 max-w-lg leading-relaxed">
             I'm a multidisciplinary developer specializing in AI Automation, Web
             Apps, Software, and Game Development. I turn complex problems into
             elegant solutions.
@@ -79,13 +79,13 @@ export const Hero = () => {
           <div className="flex flex-wrap gap-4">
             <a
               href="#portfolio"
-              className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors flex items-center gap-2"
+              className="bg-foreground text-background px-8 py-3 rounded-full font-medium hover:bg-foreground/90 transition-colors flex items-center gap-2"
             >
               View Work <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 rounded-full font-medium border border-white/20 hover:bg-white/5 transition-colors"
+              className="px-8 py-3 rounded-full font-medium border border-foreground/20 hover:bg-foreground/5 transition-colors"
             >
               Contact Me
             </a>
@@ -141,13 +141,13 @@ export const Hero = () => {
                   />
                 </svg>
 
-                <div className="font-crayon text-2xl text-white transform -rotate-6">
+                <div className="font-crayon text-2xl text-foreground transform -rotate-6">
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1.5, duration: 0.5 }}
                   >
-                    <span className="text-accent">Hi, I'm</span>
+                    <span className="text-primary">Hi, I'm</span>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}

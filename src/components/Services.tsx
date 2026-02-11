@@ -46,7 +46,7 @@ export const Services = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             What I <span className="text-gradient">Do</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-foreground/60 max-w-2xl mx-auto">
             Combining creativity with technical expertise to deliver exceptional
             digital solutions.
           </p>
@@ -61,22 +61,22 @@ export const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="group relative p-6 glass rounded-2xl border border-white/5 hover:border-primary/20 transition-all duration-300"
+              className="group relative p-6 glass rounded-2xl border border-foreground/5 hover:border-primary/20 transition-all duration-300 bg-secondary/30"
             >
               <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                <ArrowUpRight className="w-5 h-5 text-gray-500" />
+                <ArrowUpRight className="w-5 h-5 text-foreground/40" />
               </div>
 
               <div
-                className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 text-2xl ${service.color} group-hover:scale-110 transition-transform duration-300`}
+                className={`w-12 h-12 rounded-xl bg-foreground/5 flex items-center justify-center mb-6 text-2xl ${service.color} group-hover:scale-110 transition-transform duration-300`}
               >
                 <service.icon className="w-6 h-6" />
               </div>
 
-              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors text-foreground">
                 {service.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-foreground/50 text-sm leading-relaxed">
                 {service.description}
               </p>
             </motion.div>

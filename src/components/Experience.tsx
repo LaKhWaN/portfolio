@@ -41,7 +41,7 @@ export const Experience = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             My <span className="text-gradient">Journey</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-foreground/60 max-w-2xl mx-auto text-lg">
             Turning complex challenges into impactful solutions.
           </p>
         </motion.div>
@@ -82,23 +82,23 @@ export const Experience = () => {
 
                 <div className="relative z-10">
                   <div className="flex flex-col gap-4 mb-4">
-                    <span className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-accent w-fit">
+                    <span className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-mono text-primary w-fit font-bold">
                       {exp.year}
                     </span>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-accent transition-colors">
+                    <h3 className="text-2xl font-bold text-foreground group-hover:text-accent transition-colors">
                       {exp.role}
                     </h3>
                   </div>
 
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-foreground/70 mb-6 leading-relaxed">
                     {exp.description}
                   </p>
 
-                  <div className="flex items-center gap-3 mb-6 p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div className="flex items-center gap-3 mb-6 p-3 rounded-lg bg-foreground/5 border border-foreground/5">
                     <span className="text-sm font-semibold text-primary">
                       Impact:
                     </span>
-                    <span className="text-sm text-gray-200">
+                    <span className="text-sm text-foreground/80">
                       {exp.achievement}
                     </span>
                   </div>
@@ -107,7 +107,7 @@ export const Experience = () => {
                     {exp.tech.map((t) => (
                       <span
                         key={t}
-                        className="text-xs px-3 py-1 rounded-full bg-black/40 border border-white/10 text-gray-400 group-hover:border-primary/30 transition-colors"
+                        className="text-xs px-3 py-1 rounded-full bg-secondary border border-foreground/10 text-foreground/60 group-hover:border-primary/30 transition-colors"
                       >
                         {t}
                       </span>

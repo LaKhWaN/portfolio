@@ -4,5 +4,17 @@
     "title": "Model Context Protocol (MCP): The 'USB-C Moment' for AI Agents in 2026",
     "date": "2026-02-10",
     "description": "Why the Model Context Protocol is standardizing how AI agents connect to data and tools for SMBs."
+  },
+  {
+    "slug": "deepseek-vs-openai-economic-reality",
+    "title": "DeepSeek v3 vs. OpenAI: The Economic Reality of Production-Grade AI Agents in 2026",
+    "date": "2026-02-11",
+    "description": "How DeepSeek v3 is disrupting the AI market by offering high-tier reasoning at a 90% lower cost."
+  },
+  {
+    "slug": "ai-agent-social-networks",
+    "title": "AI Agents Have Their Own Social Network Now (And It's Getting Weird)",
+    "date": "2026-02-11",
+    "description": "A deep dive into the first Reddit-style social layer for autonomous agents and what it means for the future of A2A communication."
   }
 ]

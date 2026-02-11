@@ -6,14 +6,29 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 267 100% 61%; /* Deep Purple/Violet */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --accent: 267 100% 61%;
+    --accent-foreground: 0 0% 98%;
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 240 5.9% 10% / 0.1;
+  }
+
+  .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --primary: 267 100% 61%; /* Deep Purple/Violet */
+    --primary: 267 100% 61%;
     --primary-foreground: 0 0% 98%;
     --secondary: 240 5.9% 10%;
     --secondary-foreground: 0 0% 98%;
     --accent: 190 100% 50%; /* Cyan/Neon */
     --accent-foreground: 240 10% 3.9%;
+    --glass-bg: 0 0% 100% / 0.05;
+    --glass-border: 0 0% 100% / 0.1;
   }
 
   html.lenis {
@@ -54,7 +69,10 @@
 
 /* Custom Utilities */
 .glass {
-  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  background-color: hsla(var(--glass-bg));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid hsla(var(--glass-border));
 }
 
 .text-gradient {
