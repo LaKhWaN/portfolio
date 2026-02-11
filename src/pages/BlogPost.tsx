@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Calendar, ArrowLeft, Share2, Clock } from "lucide-react";
 
 export const BlogPost = () => {
@@ -44,6 +45,40 @@ export const BlogPost = () => {
 
   return (
     <div className="container mx-auto px-6 pt-32 pb-20">
+      <Helmet>
+        <title>{`${post.data.title} | Upender Singh Lakhwan`}</title>
+        <meta name="description" content={post.data.description} />
+        <meta property="og:title" content={post.data.title} />
+        <meta property="og:description" content={post.data.description} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TechArticle",
+            "headline": post.data.title,
+            "description": post.data.description,
+            "author": {
+              "@type": "Person",
+              "name": "Upender Singh Lakhwan",
+              "url": "https://lakhwan.com"
+            },
+            "datePublished": post.data.date,
+            "publisher": {
+              "@type": "Organization",
+              "name": "Lakhwan.folio",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://lakhwan.com/src/assets/profile.png"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://lakhwan.com/blog/${slug}`
+            }
+          })}
+        </script>
+      </Helmet>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -20 }}

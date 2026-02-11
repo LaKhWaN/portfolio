@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Calendar, ArrowRight } from "lucide-react";
 
 interface Post {
@@ -22,6 +23,13 @@ export const BlogIndex = () => {
 
   return (
     <div className="container mx-auto px-6 pt-32 pb-20">
+      <Helmet>
+        <title>Technical Insights | Upender Singh Lakhwan</title>
+        <meta name="description" content="Deep dives into AI infrastructure, automated workflows, and the future of agentic engineering by Upender Singh Lakhwan." />
+        <meta property="og:title" content="Technical Insights | Upender Singh Lakhwan" />
+        <meta property="og:description" content="Deep dives into AI infrastructure, automated workflows, and the future of agentic engineering." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
