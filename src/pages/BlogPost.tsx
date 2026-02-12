@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Calendar, ArrowLeft, Share2, Clock } from "lucide-react";
@@ -134,6 +135,7 @@ export const BlogPost = () => {
         >
           <div className="text-foreground/80 leading-[1.8] text-lg md:text-xl space-y-8 font-sans">
             <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
               components={{
                 h1: ({node, ...props}) => <h1 className="text-4xl font-bold mt-16 mb-8 text-white uppercase tracking-tight" {...props} />,
                 h2: ({node, ...props}) => <h2 className="text-3xl font-bold mt-16 mb-6 text-white border-b border-white/5 pb-4 uppercase tracking-tight" {...props} />,
@@ -144,6 +146,10 @@ export const BlogPost = () => {
                 strong: ({node, ...props}) => <strong className="text-primary font-extrabold" {...props} />,
                 blockquote: ({node, ...props}) => <blockquote className="bg-secondary/20 backdrop-blur-md p-10 rounded-[2.5rem] italic my-12 border-l-8 border-primary relative overflow-hidden" {...props} />,
                 code: ({node, ...props}) => <code className="bg-white/10 px-2 py-1 rounded text-accent text-base font-mono" {...props} />,
+                table: ({node, ...props}) => <table className="w-full border-collapse my-8 bg-secondary/10 rounded-2xl overflow-hidden" {...props} />,
+                thead: ({node, ...props}) => <thead className="bg-primary/10 text-primary uppercase text-xs tracking-widest font-bold" {...props} />,
+                th: ({node, ...props}) => <th className="p-4 border-b border-white/5 text-left" {...props} />,
+                td: ({node, ...props}) => <td className="p-4 border-b border-white/5 text-foreground/70" {...props} />,
               }}
             >
               {post.content}
