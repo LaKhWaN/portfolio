@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Send, Mail, Phone, CheckCircle2 } from "lucide-react";
+import { Send, Mail, Phone, CheckCircle2, Calendar } from "lucide-react";
 import { useState } from "react";
 
 export const Contact = () => {
@@ -12,7 +12,6 @@ export const Contact = () => {
     setResult("Sending...");
     
     const formData = new FormData(event.currentTarget);
-    // Note: You'll need to replace 'YOUR_ACCESS_KEY_HERE' with your actual Web3Forms access key
     formData.append("access_key", "66f652d8-da34-4141-b88f-ef07feffb0ef");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -69,6 +68,19 @@ export const Contact = () => {
                   <p className="font-medium">+91 7009966917</p>
                 </div>
               </div>
+            </div>
+
+            {/* Added Direct Booking Button for better mobile flow */}
+            <div className="mt-12 hidden lg:block">
+              <p className="text-sm font-bold text-foreground/40 mb-4 uppercase tracking-widest">Or Book Directly</p>
+              <a 
+                href="https://calendly.com/upenderlakhwan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-secondary/50 hover:bg-secondary border border-white/5 hover:border-primary/50 text-foreground px-8 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 active:scale-95 group"
+              >
+                Schedule a Call <Calendar className="w-5 h-5 text-primary group-hover:animate-bounce" />
+              </a>
             </div>
           </motion.div>
 
@@ -147,6 +159,27 @@ export const Contact = () => {
             )}
           </motion.div>
         </div>
+
+        {/* Mobile-only/Alternative CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-20 lg:hidden text-center"
+        >
+          <div className="glass p-10 rounded-[2.5rem] bg-secondary/30 border-dashed border-2 border-white/5">
+            <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Prefer a <span className="text-gradient">Quick Call</span>?</h3>
+            <p className="text-foreground/60 mb-8">Skip the back-and-forth and pick a time that works for you.</p>
+            <a 
+              href="https://calendly.com/upenderlakhwan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-primary hover:bg-primary/80 text-white px-10 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/20"
+            >
+              Book My Calendar <Calendar className="w-5 h-5" />
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
