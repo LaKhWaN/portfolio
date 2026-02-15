@@ -40,5 +40,11 @@
     "title": "Vibe Hacking: The Democratization of Cybercrime in 2026",
     "date": "2026-02-14",
     "description": "How 'Vibe Hacking' and AI agents are shifting cybercrime from high-skill exploits to high-accuracy social engineering in 2026."
+  },
+  {
+    "slug": "grp-obliteration-ai-safety-2026",
+    "title": "The GRP-Obliteration: Why Every AI Safety Filter in 2026 is Suddenly Vulnerable",
+    "date": "2026-02-15",
+    "description": "How the newly discovered GRP-Obliteration vulnerability is bypassing safety mechanisms across 15 major AI models and what it means for enterprise agent deployments."
   }
 ]
