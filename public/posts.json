@@ -46,5 +46,11 @@
     "title": "The GRP-Obliteration: Why Every AI Safety Filter in 2026 is Suddenly Vulnerable",
     "date": "2026-02-15",
     "description": "How the newly discovered GRP-Obliteration vulnerability is bypassing safety mechanisms across 15 major AI models and what it means for enterprise agent deployments."
+  },
+  {
+    "slug": "future-of-openclaw-openai-kimi",
+    "title": "The Future of OpenClaw: Founder Joins OpenAI, China's Kimi Makes Its Move",
+    "date": "2026-02-16",
+    "description": "Why OpenClaw's founder joining OpenAI and Kimi's integration signals a new era for open-source AI agents."
   }
 ]
