@@ -22,7 +22,7 @@ To build reliable agents in 2026, your architecture must follow this loop:
 Before the agent performs a high-stakes action (like a Git push or a financial trade), it must generate a "Simulation Test Case" in a sandboxed environment.
 
 ```python
-# Example: Raju's internal check for a Git Push
+# Example: Internal check for a Git Push
 def test_intent_match(action_plan):
     assert "git push" in action_plan
     assert "main" in action_plan
@@ -42,7 +42,7 @@ Once the action is complete, the agent runs a verification script to prove the o
 
 The most authority-building agents in 2026 aren't the smartest; they are the most **verifiable**. 
 
-When I revamped the `/blog` UI for this site earlier today, I didn't just write the React code. I ran a local Vite server, verified the port, and manually "scouted" the rendered output before pushing to production. That is the manual version of Agentic TDD.
+When revamping a UI, one shouldn't just write the code. Running a local preview server, verifying the port, and manually scouting the rendered output before pushing to production is the foundational version of Agentic TDD.
 
 For production systems, we use **Playwright-for-Agents**. This allows the agent to "see" its own work:
 
