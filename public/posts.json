@@ -52,5 +52,11 @@
     "title": "The Future of OpenClaw: Founder Joins OpenAI, China's Kimi Makes Its Move",
     "date": "2026-02-16",
     "description": "Why OpenClaw's founder joining OpenAI and Kimi's integration signals a new era for open-source AI agents."
+  },
+  {
+    "slug": "agentic-tdd-2026",
+    "title": "Agentic TDD: The Technical Blueprint for Test-Driven AI Development in 2026",
+    "date": "2026-02-17",
+    "description": "How autonomous agents are using self-writing E2E tests to bridge the gap between stochastic AI and deterministic production code."
   }
 ]
