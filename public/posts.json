@@ -58,5 +58,11 @@
     "title": "Agentic TDD: The Technical Blueprint for Test-Driven AI Development in 2026",
     "date": "2026-02-17",
     "description": "How autonomous agents are using self-writing E2E tests to bridge the gap between stochastic AI and deterministic production code."
+  },
+  {
+    "slug": "2026-02-17-mcp-agentic-infrastructure",
+    "title": "The Agentic Protocol Layer: Why MCP is the New TCP/IP for AI",
+    "date": "2026-02-17",
+    "description": "Why the Model Context Protocol is becoming the fundamental infrastructure for reliable, interoperable AI agents in 2026."
   }
 ]
