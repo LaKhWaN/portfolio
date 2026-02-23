@@ -1,5 +1,11 @@
 [
   {
+    "slug": "2026-02-23-multi-agent-orchestration-enterprise",
+    "title": "Beyond the Prompt: Architecting Multi-Agent Orchestration for Enterprise Reliability",
+    "date": "2026-02-23",
+    "description": "Moving from monolithic agents to orchestrated expert swarms. A deep dive into state management, MCP integration, and deterministic recovery in agentic workflows."
+  },
+  {
     "slug": "mcp-usb-c-moment",
     "title": "Model Context Protocol (MCP): The 'USB-C Moment' for AI Agents in 2026",
     "date": "2026-02-10",
