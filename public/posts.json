@@ -1,5 +1,11 @@
 [
   {
+    "slug": "2026-02-24-securing-agentic-perimeter-mcp-cosai",
+    "title": "Securing the Agentic Perimeter: Why Zero-Trust MCP and the CoSAI Framework are Mandatory in 2026",
+    "date": "2026-02-24",
+    "description": "As AI agents move from read-only assistants to write-capable operators, the security perimeter has shifted. We analyze the CoSAI framework and why Zero-Trust MCP is the only way to prevent agent-driven RCE."
+  },
+  {
     "slug": "2026-02-23-multi-agent-orchestration-enterprise",
     "title": "Beyond the Prompt: Architecting Multi-Agent Orchestration for Enterprise Reliability",
     "date": "2026-02-23",
