@@ -13,7 +13,13 @@ export const BlogPost = () => {
   useEffect(() => {
     if (!slug) return;
     fetch(`/posts/${slug}.md`)
-      .then((res) => res.text())
+      .then((res) => {
+        if (!res.ok) {
+            // Try fallback if the slug doesn't have the date prefix
+            return fetch(`/posts/2026-02-28-${slug}.md`).then(r => r.text());
+        }
+        return res.text();
+      })
       .then((text) => {
         // Simple manual frontmatter parser to avoid 'Buffer' issues in browser
         const parts = text.split('---');

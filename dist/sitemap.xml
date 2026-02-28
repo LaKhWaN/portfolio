@@ -3,15 +3,45 @@
   
   <url>
     <loc>https://lakhwan.com</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://lakhwan.com/blog</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <priority>0.8</priority>
   </url>
   
+  <url>
+    <loc>https://lakhwan.com/blog/mastering-aeo-answer-engine-optimization-2026</loc>
+    <lastmod>2026-02-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-02-26-samsung-galaxy-s26-ultra-agentic-ai-now-nudge</loc>
+    <lastmod>2026-02-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-02-25-agentic-stack-interoperability-mcp-a2a</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-02-24-nvidia-openai-30b-investment-neutral-silicon</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-02-24-securing-agentic-perimeter-mcp-cosai</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-02-23-multi-agent-orchestration-enterprise</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://lakhwan.com/blog/mcp-usb-c-moment</loc>
     <lastmod>2026-02-10</lastmod>
@@ -30,6 +60,81 @@
   <url>
     <loc>https://lakhwan.com/blog/action-gap-operators</loc>
     <lastmod>2026-02-12</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/sovereign-ai-infrastructure</loc>
+    <lastmod>2026-02-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/frontier-vs-efficient-models-2026</loc>
+    <lastmod>2026-02-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/vibe-hacking-democratization-2026</loc>
+    <lastmod>2026-02-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/grp-obliteration-ai-safety-2026</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/future-of-openclaw-openai-kimi</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/agentic-tdd-2026</loc>
+    <lastmod>2026-02-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-02-17-mcp-agentic-infrastructure</loc>
+    <lastmod>2026-02-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/india-ai-impact-summit-2026-sarvam-ai-sundar-pichai</loc>
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/google-io-2026-gemini-2-5-agentic-pivot</loc>
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/sam-altman-bharat-mandapam-software-reset-2026</loc>
+    <lastmod>2026-02-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/agentic-economic-architecture-2026</loc>
+    <lastmod>2026-02-20</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-02-21-a2a-interoperability-mcp-convergence</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-02-21-super-agent-front-door</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/india-jio-intelligence-sovereign-ai-2026</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-02-23-samsung-perplexity-galaxy-ai-agentic-stack</loc>
+    <lastmod>2026-02-23</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
