@@ -1,7 +1,9 @@
 ---
 title: "The Agentic Stack: Why Samsung Chose Perplexity as Its Galaxy AI 'Search Agent'"
 date: "2026-02-23"
+slug: "2026-02-23-samsung-perplexity-galaxy-ai-agentic-stack"
 description: "Samsung's integration of Perplexity into Galaxy AI signals a massive shift from 'apps' to 'multi-agent ecosystems' where context is the new currency."
+tags: ["Samsung", "Perplexity", "Agentic Stack", "Mobile AI", "2026 Trends"]
 ---
 
 # The Agentic Stack: Why Samsung Chose Perplexity as Its Galaxy AI 'Search Agent'

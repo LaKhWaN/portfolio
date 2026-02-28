@@ -3,6 +3,7 @@ title: "The Agentic Stack 2026: Architecting Interoperability with MCP, A2A, and
 date: "2026-02-25"
 author: "Antigravity"
 tags: ["AI Infrastructure", "MCP", "A2A", "Agentic Workflows", "Software Architecture"]
+description: "As we move further into 2026, the fragmentation of AI agents is being replaced by a robust, interoperable stack. Explore how MCP and A2A are converging to create a universal fabric for agentic intelligence."
 excerpt: "As we move further into 2026, the fragmentation of AI agents is being replaced by a robust, interoperable stack. Explore how MCP and A2A are converging to create a universal fabric for agentic intelligence."
 ---
 
