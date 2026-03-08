@@ -1,5 +1,11 @@
 [
   {
+    "slug": "2026-03-08-agentic-observability-opentelemetry-mcp",
+    "title": "The Agentic Observability Crisis: Why Your 2026 Stack Needs OpenTelemetry-Native Agent Tracing",
+    "date": "2026-03-08",
+    "description": "As autonomous agents move from simple chat loops to multi-step recursive orchestrations, traditional logging fails. Discover why OpenTelemetry's new gen_ai.* semantic conventions and MCP-native tracing are the only way to debug the 'Reasoning Black Box'."
+  },
+  {
     "slug": "2026-03-04-ios-26-4-agentic-apple-pivot",
     "title": "The Agentic iPhone: Why Apple's iOS 26.4 is the Final Nail in the App Store's Coffin",
     "date": "2026-03-04",
