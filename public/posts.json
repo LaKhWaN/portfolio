@@ -1,5 +1,11 @@
 [
   {
+    "slug": "2026-03-11-unified-agent-governance-uag-enterprise",
+    "title": "The Agentic 'North Star': Why Unified Agent Governance (UAG) is the 2026 Enterprise Mandate",
+    "date": "2026-03-11",
+    "description": "As multi-agent swarms take over enterprise workflows, the 'Shadow AI' problem has evolved into an 'Autonomous Liability' crisis. Learn why Unified Agent Governance (UAG) is the essential framework for securing agentic workflows in 2026."
+  },
+  {
     "slug": "2026-03-08-agentic-observability-opentelemetry-mcp",
     "title": "The Agentic Observability Crisis: Why Your 2026 Stack Needs OpenTelemetry-Native Agent Tracing",
     "date": "2026-03-08",
