@@ -3,17 +3,52 @@
   
   <url>
     <loc>https://lakhwan.com</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://lakhwan.com/blog</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://lakhwan.com/blog/mastering-aeo-answer-engine-optimization-2026</loc>
+    <loc>https://lakhwan.com/blog/2026-03-11-unified-agent-governance-uag-enterprise</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-03-08-agentic-observability-opentelemetry-mcp</loc>
+    <lastmod>2026-03-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-03-04-ios-26-4-agentic-apple-pivot</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-03-04-a2a-orchestration-beyond-mcp</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-03-03-asml-beyond-euv-hyper-na-agentic-silicon</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-03-03-agentic-trough-of-disillusionment-2026</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-03-02-louisiana-hyperion-ai-infrastructure-war</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lakhwan.com/blog/2026-02-28-mastering-aeo-answer-engine-optimization-2026</loc>
     <lastmod>2026-02-28</lastmod>
     <priority>0.7</priority>
   </url>

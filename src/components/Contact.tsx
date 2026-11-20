@@ -1,185 +1,104 @@
-import { motion } from "framer-motion";
-import { Send, Mail, Phone, CheckCircle2, Calendar } from "lucide-react";
 import { useState } from "react";
+import { Mail, Phone, Calendar, CheckCircle2 } from "lucide-react";
+import { CALENDLY, EMAIL, PHONE_DISPLAY, PHONE_TEL } from "../lib/site";
+import { sendMessage } from "../lib/contact";
+
+type Status = "idle" | "loading" | "success" | "error";
+
+const field =
+  "w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground placeholder:text-muted/70 focus:border-primary focus:outline-none";
 
 export const Contact = () => {
-  const [result, setResult] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<Status>("idle");
 
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
     setStatus("loading");
-    setResult("Sending...");
-    
-    const formData = new FormData(event.currentTarget);
-    formData.append("access_key", "66f652d8-da34-4141-b88f-ef07feffb0ef");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
+    try {
+      await sendMessage(new FormData(form));
+      form.reset();
       setStatus("success");
-      setResult("Message sent successfully!");
-      (event.target as HTMLFormElement).reset();
-    } else {
-      console.log("Error", data);
+    } catch (err) {
+      console.error("Contact form failed", err);
       setStatus("error");
-      setResult(data.message);
     }
   };
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Let's <span className="text-gradient">Collaborate</span>
-            </h2>
-            <p className="text-gray-400 text-lg mb-8 max-w-md">
-              Have a project in mind? Whether it's a new game, an AI agent, or a
-              web platform, I'm ready to bring it to life.
-            </p>
+    <section id="contact" className="border-t border-border bg-card/50 py-20 md:py-28">
+      <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12">
+        <div>
+          <p className="eyebrow mb-3">Contact</p>
+          <h2 className="text-3xl md:text-5xl font-semibold mb-5">Tell me about your business.</h2>
+          <p className="text-lg text-muted mb-8 max-w-md leading-relaxed">
+            Send a message, call, or book a free 20-minute call. I reply within one working day.
+          </p>
 
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-gray-300">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-primary">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500">Email Me</p>
-                  <p className="font-medium">upenderlakhwan@gmail.com</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4 text-gray-300">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-primary">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500">Call Me</p>
-                  <p className="font-medium">+91 7009966917</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Added Direct Booking Button for better mobile flow */}
-            <div className="mt-12 hidden lg:block">
-              <p className="text-sm font-bold text-foreground/40 mb-4 uppercase tracking-widest">Or Book Directly</p>
-              <a 
-                href="https://calendly.com/upenderlakhwan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-secondary/50 hover:bg-secondary border border-white/5 hover:border-primary/50 text-foreground px-8 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 active:scale-95 group"
-              >
-                Schedule a Call <Calendar className="w-5 h-5 text-primary group-hover:animate-bounce" />
+          <ul className="space-y-4 mb-8">
+            <li>
+              <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-3 text-lg hover:text-primary">
+                <Mail className="w-5 h-5 text-primary" /> {EMAIL}
               </a>
-            </div>
-          </motion.div>
+            </li>
+            <li>
+              <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-3 text-lg hover:text-primary">
+                <Phone className="w-5 h-5 text-primary" /> {PHONE_DISPLAY}
+              </a>
+            </li>
+          </ul>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="glass p-8 rounded-[2.5rem] bg-secondary/30"
-          >
-            {status === "success" ? (
-              <div className="text-center py-12 space-y-4">
-                <div className="flex justify-center">
-                  <CheckCircle2 className="w-16 h-16 text-green-500 animate-bounce" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground">Transmission Received!</h3>
-                <p className="text-foreground/60">I'll get back to you faster than a reasoning model. 🚀</p>
-                <button 
-                  onClick={() => setStatus("idle")}
-                  className="text-primary hover:underline text-sm font-medium pt-4"
-                >
-                  Send another message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={onSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-bold text-foreground/70 mb-2 uppercase tracking-widest">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-primary transition-all shadow-inner"
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-foreground/70 mb-2 uppercase tracking-widest">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-primary transition-all shadow-inner"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-foreground/70 mb-2 uppercase tracking-widest">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    required
-                    rows={4}
-                    className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-primary transition-all shadow-inner"
-                    placeholder="Tell me about your project..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="w-full bg-gradient-to-r from-primary to-accent text-white font-bold py-5 rounded-2xl hover:opacity-90 transition-opacity flex items-center justify-center gap-3 disabled:opacity-50 shadow-lg shadow-primary/20"
-                >
-                  {status === "loading" ? "Initializing..." : "Send Message"}
-                  {status !== "loading" && <Send className="w-5 h-5" />}
-                </button>
-                
-                {status === "error" && (
-                    <p className="text-red-500 text-sm text-center">{result}</p>
-                )}
-              </form>
-            )}
-          </motion.div>
+          <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-outline">
+            <Calendar className="w-5 h-5" /> Book a call
+          </a>
+          <p className="text-sm text-muted mt-4">Based in India (IST), working with clients anywhere. Call me anytime.</p>
         </div>
 
-        {/* Mobile-only/Alternative CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-20 lg:hidden text-center"
-        >
-          <div className="glass p-10 rounded-[2.5rem] bg-secondary/30 border-dashed border-2 border-white/5">
-            <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Prefer a <span className="text-gradient">Quick Call</span>?</h3>
-            <p className="text-foreground/60 mb-8">Skip the back-and-forth and pick a time that works for you.</p>
-            <a 
-              href="https://calendly.com/upenderlakhwan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary hover:bg-primary/80 text-white px-10 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/20"
-            >
-              Book My Calendar <Calendar className="w-5 h-5" />
-            </a>
-          </div>
-        </motion.div>
+        <div className="rounded-2xl border border-border bg-background p-6 sm:p-8">
+          {status === "success" ? (
+            <div className="text-center py-10" role="status">
+              <CheckCircle2 className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-2xl font-semibold mb-2">Thanks, message received.</h3>
+              <p className="text-muted mb-6">I'll get back to you within one working day.</p>
+              <button onClick={() => setStatus("idle")} className="link text-sm">
+                Send another message
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={onSubmit} className="space-y-5">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                <input id="name" name="name" type="text" required autoComplete="name" className={field} />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+                <input id="email" name="email" type="email" required autoComplete="email" className={field} />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">What do you need?</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={5}
+                  placeholder="A bit about your business and what you'd like the website to do"
+                  className={field}
+                />
+              </div>
+              <button type="submit" disabled={status === "loading"} className="btn-primary w-full disabled:opacity-60">
+                {status === "loading" ? "Sending…" : "Send message"}
+              </button>
+              <div aria-live="polite">
+                {status === "error" && (
+                  <p className="text-sm text-red-700 dark:text-red-400">
+                    Sorry, your message didn't go through. Please try again, or email me at{" "}
+                    <a href={`mailto:${EMAIL}`} className="link">{EMAIL}</a>.
+                  </p>
+                )}
+              </div>
+            </form>
+          )}
+        </div>
       </div>
     </section>
   );

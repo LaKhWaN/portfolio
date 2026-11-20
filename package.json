@@ -5,16 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-sitemap.cjs && tsc -b && vite build",
+    "build": "node scripts/generate-sitemap.cjs && tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node scripts/contact.test.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.26.2",
-    "gray-matter": "^4.0.3",
-    "lenis": "^1.3.17",
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

@@ -1,17 +1,23 @@
+import { Seo } from "../components/Seo";
 import { Hero } from "../components/Hero";
-import { Experience } from "../components/Experience";
-import { Services } from "../components/Services";
-import { Testimonials } from "../components/Testimonials";
+import { Work } from "../components/Work";
+import { Offer } from "../components/Offer";
+import { Process } from "../components/Process";
+import { About } from "../components/About";
 import { Contact } from "../components/Contact";
 
-export const Home = () => {
-  return (
-    <>
-      <Hero />
-      <Experience />
-      <Services />
-      <Testimonials />
-      <Contact />
-    </>
-  );
-};
+export const Home = () => (
+  <>
+    <Seo
+      title="Upender Singh Lakhwan | Websites for small businesses"
+      description="I build clear, fast websites that make your business easy to trust and contact. India-based web developer working with clients worldwide."
+      path="/"
+    />
+    <Hero />
+    <Work />
+    <Offer />
+    <Process />
+    <About />
+    <Contact />
+  </>
+);

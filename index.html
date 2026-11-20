@@ -2,9 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <script>
+      // Set theme before paint to avoid a flash. Light unless the visitor chose dark or their OS prefers it.
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (!t && matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.classList.add("dark");
+      } catch (e) {}
+    </script>
+    <!--seo-->
+    <title>Upender Singh Lakhwan | Websites for small businesses</title>
+    <meta name="description" content="I build clear, fast websites that make your business easy to trust and contact. India-based web developer working with clients worldwide." />
+    <meta property="og:title" content="Upender Singh Lakhwan | Websites for small businesses" />
+    <meta property="og:image" content="https://lakhwan.com/og.png" />
+    <!--/seo-->
+    <meta property="og:site_name" content="Upender Singh Lakhwan" />
+    <meta name="theme-color" content="#f9f7f2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#161412" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Inter:wght@400..700&display=swap" />
   </head>
   <body>
     <div id="root"></div>

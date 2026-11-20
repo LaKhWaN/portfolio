@@ -1,33 +1,24 @@
-import { useState, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
 
+// Icons switch via the `dark` class (set before paint in index.html), so server and client markup match.
 export const ThemeToggle = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+  const toggle = () => {
+    const dark = document.documentElement.classList.toggle("dark");
+    try {
+      localStorage.setItem("theme", dark ? "dark" : "light");
+    } catch {
+      /* storage blocked: theme still applies for this visit */
     }
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
     <button
-      onClick={toggleTheme}
-      className="p-2 rounded-full glass hover:bg-white/10 transition-all duration-300 group"
-      aria-label="Toggle Theme"
+      onClick={toggle}
+      className="p-2 rounded-full hover:bg-foreground/5 transition-colors"
+      aria-label="Toggle dark mode"
     >
-      {theme === "dark" ? (
-        <Sun className="w-5 h-5 text-accent animate-spin-slow" />
-      ) : (
-        <Moon className="w-5 h-5 text-primary group-hover:rotate-12 transition-transform" />
-      )}
+      <Moon className="w-5 h-5 dark:hidden" />
+      <Sun className="w-5 h-5 hidden dark:block" />
     </button>
   );
 };
