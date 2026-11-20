@@ -32,7 +32,7 @@ export const Contact = () => {
           <p className="eyebrow mb-3">Contact</p>
           <h2 className="text-3xl md:text-5xl font-semibold mb-5">Tell me about your business.</h2>
           <p className="text-lg text-muted mb-8 max-w-md leading-relaxed">
-            Send a message, call, or book a free 20-minute call. I reply within one working day.
+            Send a message, call, or book a free 30-minute call. I reply within one working day.
           </p>
 
           <ul className="space-y-4 mb-8">
@@ -88,6 +88,9 @@ export const Contact = () => {
               <button type="submit" disabled={status === "loading"} className="btn-primary w-full disabled:opacity-60">
                 {status === "loading" ? "Sending…" : "Send message"}
               </button>
+              <p className="text-xs text-muted">
+                Your details are only used to reply to you. No mailing lists.
+              </p>
               <div aria-live="polite">
                 {status === "error" && (
                   <p className="text-sm text-red-700 dark:text-red-400">

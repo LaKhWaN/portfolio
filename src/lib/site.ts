@@ -1,4 +1,4 @@
-export const SITE_URL = "https://lakhwan.com";
+export const SITE_URL = "https://www.lakhwan.com";
 export const EMAIL = "upenderlakhwan@gmail.com";
 export const PHONE_DISPLAY = "+91 70099 66917";
 export const PHONE_TEL = "+917009966917";

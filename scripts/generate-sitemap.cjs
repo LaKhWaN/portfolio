@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://lakhwan.com';
+const BASE_URL = 'https://www.lakhwan.com';
 
 function generateSitemap() {
   const postsJsonPath = path.join(__dirname, '../public/posts.json');

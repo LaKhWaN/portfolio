@@ -1,9 +1,9 @@
 import { Seo } from "../components/Seo";
 import { Hero } from "../components/Hero";
+import { About } from "../components/About";
 import { Work } from "../components/Work";
 import { Offer } from "../components/Offer";
 import { Process } from "../components/Process";
-import { About } from "../components/About";
 import { Contact } from "../components/Contact";
 
 export const Home = () => (
@@ -14,10 +14,10 @@ export const Home = () => (
       path="/"
     />
     <Hero />
+    <About />
     <Work />
     <Offer />
     <Process />
-    <About />
     <Contact />
   </>
 );

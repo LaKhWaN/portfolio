@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const KEY = 'e325f4fcdb2b8a73934ab607c43f36e1';
-const HOST = 'lakhwan.com';
+const HOST = 'www.lakhwan.com';
 
 async function pingIndexNow() {
   const postsJsonPath = path.join(__dirname, '../public/posts.json');

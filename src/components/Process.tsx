@@ -1,7 +1,7 @@
 const steps = [
   {
     title: "A short call",
-    text: "We talk through your business, who your customers are and what the site needs to do. Free, about 20 minutes.",
+    text: "We talk through your business, who your customers are and what the site needs to do. Free, about 30 minutes.",
   },
   {
     title: "A clear plan and quote",

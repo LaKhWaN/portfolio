@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
+  { name: "About", href: "/#about" },
   { name: "Work", href: "/#work" },
   { name: "Services", href: "/#services" },
   { name: "Process", href: "/#process" },
-  { name: "About", href: "/#about" },
   { name: "Writing", href: "/blog" },
 ];
 
